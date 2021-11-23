@@ -1,0 +1,219 @@
+﻿<Window x:Class="Client.PlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"  
+        WindowStyle="None"
+        Title="PlayWindow" Height="1080" Width="1920" WindowState="Maximized" ResizeMode="NoResize" FontFamily="Segoe UI Black">
+    <Grid Background="#1C1C1C">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="267*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="267*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="Data" Background="#1C1C1C" FontSize="40" Foreground="White" Margin="0,134,732,0" HorizontalAlignment="Right" Width="382" Height="64" VerticalAlignment="Top" />
+        <Button  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="1806,0,0,0" Height="100" Click="Button_Click_Cabinet">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Height="100" Width="100" Source="{Binding cabinet}"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Grid HorizontalAlignment="Left">
+            <Border MinWidth="200" Margin="212,10,1500,443" Background="#FFFFF0" VerticalAlignment="Center" Padding="40" MaxWidth="200" CornerRadius="20" Height="81">
+                <Label x:Name="Mins" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Wheat" Margin="26,-10,30,-11" Height="22" Width="64"></Label>
+            </Border>
+        </Grid>
+
+
+
+
+
+
+        <Grid Width="153" Margin="24,68,1743,402" HorizontalAlignment="Left">
+            <Border MinWidth="200" Margin="-22,-57,-41,40" Background="#FFFFF0" VerticalAlignment="Center" Padding="40" MaxWidth="200" CornerRadius="20" Height="81">
+                <Label Background="Wheat" x:Name="balance" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="109"  Margin="7,-10,0,-13"/>
+            </Border>
+        </Grid>
+
+        <TabControl x:Name="Main" Background="#1C1C1C" Margin="212,203,145,122" Grid.RowSpan="4">
+            <TabItem Background="Gray" x:Name="Games" Margin="-2,-2,-52,0">
+                <TabItem.Header >
+                    <StackPanel  Orientation="Horizontal">
+                        <Ellipse Height="10" Width="10" Fill="Black" />
+                        <TextBlock  Margin="3">Игры</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="862" Width="1623">
+                            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="92,280,129,324">
+                                <Button Content="Dota" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="200,108,0,0" Height="150" Click="Button_Click_Dota">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image   Source="{Binding dota2}"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <Button  HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="400,108,0,0" Height="150" Click="Button_Click_CSGO">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image   Source="{Binding csgo}"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <Button Content="PUBG" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="600,108,0,0" Height="150" Click="Button_Click_PUBG">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image   Source="{Binding pubg}"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <Button Content="LOL" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="800,98,0,0" Height="150" Click="Button_Click_LOL">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image   Source="{Binding lol}"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <Button Content="Warface"  Width="120" Margin="1000,98,184,10" Height="150" Click="Button_Click_Warface">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image  Source="{Binding warface}"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <Button Content="Wot" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="200,-74,0,0" Height="150" Click="Button_Click_Wot">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image   Source="{Binding wot}"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                            </Grid>
+
+                        </Grid>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem  >
+            <TabItem Background="Gray" x:Name="soft" Margin="89,-3,-154,1" >
+                <TabItem.Header>
+                    <StackPanel  Orientation="Horizontal">
+                        <Rectangle Height="10" Width="10" Fill="Black" />
+                        <TextBlock Margin="3">Софт</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="862" Width="1623">
+                            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="92,280,129,324">
+                                <Button   HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="200,108,0,0" Height="100" Click="Button_Click_Browser" RenderTransformOrigin="1.145,0.545">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image  Source="{Binding browser}"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <Button  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="400,108,0,0" Height="100" Click="Button_Click_Discord">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image  Source="{Binding discord}"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <Button   Content="Faceit"  Width="100" Margin="600,108,339,0" Height="100" Click="Button_Click_Faceit">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image  Source="{Binding faceit}"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <Button  Content="Steam" Width="100" Margin="778,108,161,0" Height="100" Click="Button_Click_Steam">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image  Source="{Binding steam}"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+
+                                <Button  Content="Origin" Width="100" Margin="778,-26,161,134" Height="100" Click="Button_Click_Origin">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image  Source="{Binding origin}"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <Button  Content="TS3" Width="100" Margin="600,-26,339,134" Height="100" Click="Button_Click_TS3">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image  Source="{Binding ts3}"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <Button  Content="WarGaming" Width="100" Margin="400,-26,539,134" Height="100" Click="Button_Click_WarGaming">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image  Source="{Binding wargaming}"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <Button  Content="EpicGames" Width="100" Margin="200,-26,739,134" Height="100" Click="Button_Click_EpicGames">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image  Source="{Binding epicgames}"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <Button  Content="BattleNet" Width="100" Margin="10,98,929,10" Height="100" Click="Button_Click_BattleNet">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image  Source="{Binding battlenet}"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
+
+        <Button  Width="100" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="1806,474,0,0"  Click="Button_Click_OUT" RenderTransformOrigin="1.145,0.545" Grid.Row="3">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image  Source="{Binding _out}"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Border MinWidth="200" Margin="7,493,1713,432" Background="#FFFFF0" VerticalAlignment="Center" Padding="40" MaxWidth="200" CornerRadius="20" Height="155" Grid.RowSpan="4"></Border>
+        <Grid HorizontalAlignment="Center" Margin="49,385,1740,406" Width="131" Grid.RowSpan="4">
+            <Button  Width="100" Height="39" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="0,113,0,0"  Click="Button_Click_Mouse" RenderTransformOrigin="1.145,0.545">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image  Source="{Binding mouse}"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Width="100" Height="39" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="0,164,0,0"  Click="Button_Click_Sound" RenderTransformOrigin="1.145,0.545">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image  Source="{Binding sound}"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button  Width="100" Height="39" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="0,216,0,0"  Click="Button_Click_Nvidia" RenderTransformOrigin="1.145,0.545">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image  Source="{Binding nvidia}"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+
+    </Grid>
+</Window>
