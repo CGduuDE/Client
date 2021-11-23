@@ -10,7 +10,7 @@ namespace Client
 {
     class sql_request
     {
-        MySqlConnection mysqlConn = new MySqlConnection("server=188.120.228.37;uid=root;port=3306;pwd=fM6kK3bB3phQ;database=admin;");
+        MySqlConnection mysqlConn = new MySqlConnection("server=IP;uid=root;port=3306;pwd=pwd;database=admin;");
 
         string sql = "";
 
